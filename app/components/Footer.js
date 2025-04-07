@@ -13,7 +13,7 @@ export default function Footer() {
                     <div>
                         <h1 className="text-xl font-bold mb-3">Pages</h1>
                         <div className="flex flex-col gap-2">
-                            <a href="/" className="hover:cursor-pointer hover:underline">Home</a>
+                            <a href="" className="hover:cursor-pointer hover:underline">Home</a>
                             <a href="#about" className="hover:cursor-pointer hover:underline" >About</a>
                             <a href="#services" className="hover:cursor-pointer hover:underline" >Services</a>
                             <a href="#contact" className="hover:cursor-pointer hover:underline" >Contact</a>
