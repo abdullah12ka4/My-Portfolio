@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            perspective: 1000px;
+        }
+        .inner {
+            position: relative;
+            height: 260px;
+            width: 300px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .front, .back {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            backface-visibility: hidden;
+        }
+        .front {
+            background-color: aqua;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(0deg);
+        }
+        .back {
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+        }
+        /* This class will flip the card */
+        .flip .inner {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="main" id="card-container">
+        <div class="inner">
+            <div class="front"><h3>Front of the card</h3></div>
+            <div class="back"><h3>Back of the card</h3></div>
+        </div>
+    </div>
+
+    <script>
+        // Wait for the DOM to fully load
+        window.onload = function() {
+            // Add the 'flip' class to trigger the flip animation
+            document.getElementById('card-container').classList.add('flip');
+        };
+    </script>
+</body>
+</html>
