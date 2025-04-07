@@ -55,25 +55,25 @@ export default function Navbar() {
           >
             Home
           </Link> 
-           <a
+           <Link
             href="#about"
             className={`font-bold hover:text-gray-400 ${currentHash === "#about" ? "text-orange-500" : ""}`}
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="#services"
             className={`font-bold hover:text-gray-400 ${currentHash === "#services" ? "text-orange-500" : ""}`}
           >
             Services
-          </a>
+          </Link>
         
-          <a
+          <Link
             href="#contact"
             className={`font-bold hover:text-gray-400 ${currentHash === "#contact" ? "text-orange-500" : ""}`}
           >
             Contact Us
-          </a>
+          </Link>
         </div>
 
         <div className="md:hidden flex items-center">
@@ -92,37 +92,37 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <a
+            <Link
               className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#services" ? "text-orange-500" : ""}`}
               href="#services"
             >
               Services
-            </a>
-            <a
+            </Link>
+            <Link
               className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#about" ? "text-orange-500" : ""}`}
               href="#about"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#contact" ? "text-orange-500" : ""}`}
               href="#contact"
             >
               Contact Us
-            </a>
+            </Link>
             <button className="bg-orange-600 px-3 py-1 rounded-md font-semibold">Download CV</button>
           </div>
         )}
 
         {/* Desktop/Tablet Download CV Button */}
-        <a
+        <Link
           href="/resume.pdf"
           download
           target="_blank"
           className="bg-orange-600 px-3 py-1 rounded-md font-semibold hidden md:flex hover:bg-orange-700"
         >
           Download CV
-        </a>
+        </Link>
       </div>
     </nav>
   );

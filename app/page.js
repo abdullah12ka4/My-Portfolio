@@ -160,7 +160,7 @@ const [lastScroll, setLastScroll] = useState(0);
             Services
           </h1>
           <p className="text-center text-gray-400">
-            I am providing a services listed down below
+            I am providing Link services listed down below
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[90vw] mx-auto pt-10 mb-20 place-items-center">
             {data.map((post, index) => (
@@ -232,8 +232,8 @@ const [lastScroll, setLastScroll] = useState(0);
           </h1>
           <div className="flex flex-col-reverse lg:flex-row gap-3 w-[90vw] items-center text-lg text-gray-400 mx-auto">
               <p className="text-lg text-gray-400 text-center w-full lg:flex-1">
-              Abdullah, Web developer from Pakistan, I am a frontend and mern
-              stack web developer using ReactJs and NextJs. I will provide a
+              Abdullah, Web developer from Pakistan, I am Link frontend and mern
+              stack web developer using ReactJs and NextJs. I will provide Link
               scalable and responsive website for your own and organization.
             </p>  
           
@@ -253,7 +253,7 @@ const [lastScroll, setLastScroll] = useState(0);
           </h1>
           <div className="flex flex-col gap-3 text-lg text-gray-400 mx-auto pt- mb-20 max-w-[90vw]">
              <p className="text-lg text-gray-400 text-center my-5">
-             My educational background has provided me with a strong foundation in both theoretical and practical aspects of software development. I’ve studied a range of subjects that have helped me acquire the knowledge and problem-solving skills necessary to excel in the tech industry.
+             My educational background has provided me with Link strong foundation in both theoretical and practical aspects of software development. I’ve studied Link range of subjects that have helped me acquire the knowledge and problem-solving skills necessary to excel in the tech industry.
              </p>
            
                <div className="flex flex-row w-full sm:flex-col justify-center min-h-[250px] sm:min-h-[200px] bg-gray-700  rounded-md relative">
@@ -287,7 +287,7 @@ const [lastScroll, setLastScroll] = useState(0);
     />
           </div>
              <p className="w-full lg:flex-1 text-lg text-gray-400 text-center my-5">
-             I possess a versatile skill set that spans a wide range of technical and creative abilities. From mastering complex software tools to excelling in collaborative environments, I can quickly adapt to new challenges and tasks. My problem-solving capabilities allow me to find innovative solutions, while my strong communication skills enable me to convey ideas clearly and effectively. Whether working independently or as part of a team, I thrive in dynamic settings and consistently deliver high-quality results. My passion for growth drives me to continuously refine my skills, ensuring that I stay at the forefront of evolving trends and technologies.
+             I possess Link versatile skill set that spans Link wide range of technical and creative abilities. From mastering complex software tools to excelling in collaborative environments, I can quickly adapt to new challenges and tasks. My problem-solving capabilities allow me to find innovative solutions, while my strong communication skills enable me to convey ideas clearly and effectively. Whether working independently or as part of Link team, I thrive in dynamic settings and consistently deliver high-quality results. My passion for growth drives me to continuously refine my skills, ensuring that I stay at the forefront of evolving trends and technologies.
             </p>
             </div>
         
@@ -329,16 +329,16 @@ const [lastScroll, setLastScroll] = useState(0);
             Welcome to my portfolio
           </div>
           <p className="text-lg text-center sm:text-left w-[100%] md:w-[80%] min-h-[80px]">
-            <span>Here I provide a lot of services like that </span>
+            <span>Here I provide Link lot of services like that </span>
             <span className="underline text-xl" ref={el}></span>
           </p>
           <button className={`bg-orange-600 ${isVisible ? 'button-animate': ''} font-bold text-xl my-5  px-4 py-2 rounded-md hover:bg-orange-500`}><Link href="#contact">Hire Me</Link></button>
         <div className="flex gap-5 py-4 md:w-[80%] items-center flex-wrap text-2xl">
-        <a href="https://www.youtube.com/@itsabdullahtech"><FaYoutube/></a>
-        <a href=""><FaXTwitter/></a>
-        <a href="https://www.instagram.com/_____abdullah_here/"><FaInstagram/></a>
-        <a href=""><FaGithub/></a>
-        <a href=""><FaLinkedin/></a>
+        <Link href="https://www.youtube.com/@itsabdullahtech"><FaYoutube/></Link>
+        <Link href=""><FaXTwitter/></Link>
+        <Link href="https://www.instagram.com/_____abdullah_here/"><FaInstagram/></Link>
+        <Link href=""><FaGithub/></Link>
+        <Link href=""><FaLinkedin/></Link>
       </div> 
         </div>
       </div>
