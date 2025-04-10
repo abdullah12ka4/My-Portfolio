@@ -110,19 +110,20 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
-            <button className="bg-orange-600 px-3 py-1 rounded-md font-semibold">Download CV</button>
+            <button className="bg-orange-600 hover:bg-orange-700 px-3 py-1 rounded-md font-semibold">
+                <Link
+          href="/AbdullahResume.pdf"
+          download
+          target="_blank"    
+        >
+          Download CV
+        </Link>
+            </button>
           </div>
         )}
 
         {/* Desktop/Tablet Download CV Button */}
-        <Link
-          href="/AbdullahResume.pdf"
-          download
-          target="_blank"
-          className="bg-orange-600 px-3 py-1 rounded-md font-semibold hidden md:flex hover:bg-orange-700"
-        >
-          Download CV
-        </Link>
+      
       </div>
     </nav>
   );
