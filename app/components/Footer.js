@@ -8,9 +8,6 @@ import {
 } from "react-icons/fa6";
 
 export default function Footer() {
-  const handleLinkClick = (link) => {
-    setActiveLink(link); // Update the active link state
-  };
   return (
     <div className="">
       <div className="bg-[#000000] flex flex-col gap-10 p-5 pb-0">
@@ -20,7 +17,7 @@ export default function Footer() {
               <div>
                 <h1 className="text-xl font-bold mb-3">Pages</h1>
                 <div className="flex flex-col gap-2">
-                  <Link href="" className="hover:cursor-pointer hover:underline">
+                  <Link href="/" className="hover:cursor-pointer hover:underline">
                     Home
                   </Link>
                   <Link
@@ -70,29 +67,10 @@ export default function Footer() {
               <div>
                 <h1 className="text-xl font-bold mb-3">Follow Us</h1>
                 <div className="flex flex-col gap-2">
-                  <Link
-                    href="https://www.youtube.com/@itsabdullahtech"
-                    className="hover:cursor-pointer"
-                    target="_blank"
-                  >
-                    <FaYoutube />
-                  </Link>
-                  <Link href="" className="hover:cursor-pointer" target="_blank">
-                    <FaXTwitter />
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/_____abdullah_here/"
-                    className="hover:cursor-pointer"
-                    target="_blank"
-                  >
-                    <FaInstagram />
-                  </Link>
-                  <Link href="" className="hover:cursor-pointer " target="_blank">
-                    <FaGithub />
-                  </Link>
-                  <Link href="" className="hover:cursor-pointer " target="_blank">
-                    <FaLinkedin />
-                  </Link>
+                <Link className="hover:cursor-pointer" target="_blank" href="https://www.youtube.com/@itsabdullahtech"><FaYoutube/></Link>
+                <Link className="hover:cursor-pointer" target="_blank" href="https://www.instagram.com/_____abdullah_here/"><FaInstagram/></Link>
+                <Link className="hover:cursor-pointer" target="_blank" href="https://github.com/abdullah12ka4"><FaGithub/></Link>
+                <Link className="hover:cursor-pointer" target="_blank" href="https://www.linkedin.com/in/abdullah-malik-769770309/"><FaLinkedin/></Link>
                 </div>
               </div>
             </div>

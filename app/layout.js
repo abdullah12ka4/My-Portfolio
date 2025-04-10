@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-pt-10 scroll-smooth">
       <body  cz-shortcut-listen="true">
-        <Navbar />
+        <Navbar  />
         {children}
         <Footer />
       </body>

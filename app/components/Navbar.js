@@ -3,35 +3,15 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
-  const [currentHash, setCurrentHash] = useState(""); // Track the current hash (e.g., #services)
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    // Listen for hash changes in the URL
-    const onHashChange = () => {
-      setCurrentHash(window.location.hash);
-    };
-
-    // Add event listener for hash change
-    window.addEventListener("hashchange", onHashChange);
-
-    // Set initial hash on page load (if there's no hash, set it to default home)
-    setCurrentHash(window.location.hash || "#"); // Default to # (Home) when there's no hash
-
-    // Clean up the event listener when the component is unmounted
-    return () => {
-      window.removeEventListener("hashchange", onHashChange);
-    };
-  }, []);
+  const [currentHash, setcurrentHash] = useState("#")
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  const handleHomeClick = () => {
-    setCurrentHash("#"); // Manually set the current hash to `#` when Home is clicked
-  };
-
+  const handleHomeClick = (hash)=>{
+    setcurrentHash(hash)
+  }
   return (
     <nav className="border-b-2 flex items-center px-5 justify-between md:justify-between border-gray-600 h-[8vh] z-10 top-0 sticky backdrop-blur">
       {/* Logo */}
@@ -39,7 +19,7 @@ export default function Navbar() {
         <Link
           href="/"
           className={`text-2xl cursor-pointer text-orange-500 font-bold ${currentHash === "#" ? "text-orange-500" : ""}`}
-          onClick={handleHomeClick} // Update currentHash when logo is clicked
+          onClick={()=>{handleHomeClick("#")}} // Update currentHash when logo is clicked
         >
           Abdullah-Portfolio
         </Link>
@@ -51,18 +31,20 @@ export default function Navbar() {
           <Link
             href="/"
             className={`font-bold hover:text-gray-400 ${currentHash === "#" ? "text-orange-500" : ""}`}
-            onClick={handleHomeClick} // Update currentHash when Home link is clicked
+            onClick={()=>{handleHomeClick("#")}} // Update currentHash when Home link is clicked
           >
             Home
           </Link> 
            <Link
             href="#about"
+            onClick={()=>{handleHomeClick("#about")}}
             className={`font-bold hover:text-gray-400 ${currentHash === "#about" ? "text-orange-500" : ""}`}
           >
             About
           </Link>
           <Link
             href="#services"
+            onClick={()=>{handleHomeClick("#services")}}
             className={`font-bold hover:text-gray-400 ${currentHash === "#services" ? "text-orange-500" : ""}`}
           >
             Services
@@ -70,6 +52,7 @@ export default function Navbar() {
         
           <Link
             href="#contact"
+            onClick={()=>{handleHomeClick("#contact")}}
             className={`font-bold hover:text-gray-400 ${currentHash === "#contact" ? "text-orange-500" : ""}`}
           >
             Contact Us
@@ -88,25 +71,29 @@ export default function Navbar() {
             <Link
               className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#" ? "text-orange-500" : ""}`}
               href="/"
-              onClick={handleHomeClick} // Update currentHash when Home link is clicked in the mobile menu
+              onClick={()=>{handleHomeClick("#")}} // Update currentHash when Home link is clicked in the mobile menu
             >
               Home
             </Link>
             <Link
-              className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#services" ? "text-orange-500" : ""}`}
               href="#services"
+              onClick={()=>{handleHomeClick("#services")}}
+              className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#services" ? "text-orange-500" : ""}`}
+              
             >
               Services
             </Link>
             <Link
-              className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#about" ? "text-orange-500" : ""}`}
               href="#about"
+              onClick={()=>{handleHomeClick("#about")}}
+              className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#about" ? "text-orange-500" : ""}`}
             >
               About
             </Link>
             <Link
-              className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#contact" ? "text-orange-500" : ""}`}
               href="#contact"
+              onClick={()=>{handleHomeClick("#contact")}}
+              className={`block py-4 font-bold hover:text-gray-400 ${currentHash === "#contact" ? "text-orange-500" : ""}`}
             >
               Contact Us
             </Link>

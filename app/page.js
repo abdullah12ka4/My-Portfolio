@@ -329,11 +329,10 @@ const [lastScroll, setLastScroll] = useState(0);
           </p>
           <button className={`bg-orange-600 ${isVisible ? 'button-animate': ''} font-bold text-xl my-5  px-4 py-2 rounded-md hover:bg-orange-500`}><Link href="#contact">Hire Me</Link></button>
         <div className="flex gap-5 py-4 md:w-[80%] items-center flex-wrap text-2xl">
-        <Link href="https://www.youtube.com/@itsabdullahtech"><FaYoutube/></Link>
-        <Link href=""><FaXTwitter/></Link>
-        <Link href="https://www.instagram.com/_____abdullah_here/"><FaInstagram/></Link>
-        <Link href=""><FaGithub/></Link>
-        <Link href=""><FaLinkedin/></Link>
+        <Link target="_blank" href="https://www.youtube.com/@itsabdullahtech"><FaYoutube/></Link>
+        <Link target="_blank" href="https://www.instagram.com/_____abdullah_here/"><FaInstagram/></Link>
+        <Link target="_blank" href="https://github.com/abdullah12ka4"><FaGithub/></Link>
+        <Link target="_blank" href="https://www.linkedin.com/in/abdullah-malik-769770309/"><FaLinkedin/></Link>
       </div> 
         </div>
       </div>
