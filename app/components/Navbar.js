@@ -116,7 +116,7 @@ export default function Navbar() {
 
         {/* Desktop/Tablet Download CV Button */}
         <Link
-          href="/resume.pdf"
+          href="/AbdullahResume.pdf"
           download
           target="_blank"
           className="bg-orange-600 px-3 py-1 rounded-md font-semibold hidden md:flex hover:bg-orange-700"
