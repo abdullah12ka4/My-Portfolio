@@ -75,11 +75,7 @@ const [lastScroll, setLastScroll] = useState(0);
       const response = await fetch("/api/contact",{
       method:'POST',
       headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({
-        name: userContact.name,
-        email: userContact.email,
-        message: userContact.message
-      })
+      body: JSON.stringify(userContact)
     }) 
     const data = await response.json()
     setalert(data.message)    
@@ -91,7 +87,7 @@ const [lastScroll, setLastScroll] = useState(0);
       })
       setTimeout(() => {
         setalert('')        
-      }, 5000);     
+      }, 3000);     
     }
     } catch (error) {   
          setalert(error)
@@ -121,7 +117,7 @@ const [lastScroll, setLastScroll] = useState(0);
             </div>
             <div className="flex flex-col gap-3">
               <label htmlFor="email" className="text-black font-semibold">Email</label>
-              <input id="email" value={userContact.email} onChange={handleContactChange} type="text" placeholder="Your Email" className="outline-none border-b-2 py-1"/>
+              <input id="email" value={userContact.email} onChange={handleContactChange} type="email" placeholder="Your Email" className="outline-none border-b-2 py-1"/>
             </div>
             <div className="flex flex-col gap-2">
               <label htmlFor="message" className="text-black font-semibold">Message</label>
@@ -160,7 +156,7 @@ const [lastScroll, setLastScroll] = useState(0);
             Services
           </h1>
           <p className="text-center text-gray-400">
-            I am providing Link services listed down below
+            I am providing a services listed down below
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[90vw] mx-auto pt-10 mb-20 place-items-center">
             {data.map((post, index) => (
@@ -216,12 +212,12 @@ const [lastScroll, setLastScroll] = useState(0);
       {
         id:1,
         title:"React",
-        text:"Frontend Web React developer"
+        text:"Frontend React developer"
       },
       {
         id:2,
         title:"NextJS",
-        text:"Frontend Web NextJS developer" 
+        text:"Frontend NextJS developer" 
       }    
     ]   
     return (
@@ -232,9 +228,8 @@ const [lastScroll, setLastScroll] = useState(0);
           </h1>
           <div className="flex flex-col-reverse lg:flex-row gap-3 w-[90vw] items-center text-lg text-gray-400 mx-auto">
               <p className="text-lg text-gray-400 text-center w-full lg:flex-1">
-              Abdullah, Web developer from Pakistan, I am Link frontend and mern
-              stack web developer using ReactJs and NextJs. I will provide Link
-              scalable and responsive website for your own and organization.
+              Abdullah, Web developer from Pakistan, I am a frontend and mern
+              stack web developer using ReactJs and NextJs. I will provide a scalable and responsive website for your own and organization.
             </p>  
           
             <div className="w-full lg:flex-1">
@@ -253,7 +248,7 @@ const [lastScroll, setLastScroll] = useState(0);
           </h1>
           <div className="flex flex-col gap-3 text-lg text-gray-400 mx-auto pt- mb-20 max-w-[90vw]">
              <p className="text-lg text-gray-400 text-center my-5">
-             My educational background has provided me with Link strong foundation in both theoretical and practical aspects of software development. I’ve studied Link range of subjects that have helped me acquire the knowledge and problem-solving skills necessary to excel in the tech industry.
+             My educational background has provided me with a strong foundation in both theoretical and practical aspects of software development. I’ve studied a range of subjects that have helped me acquire the knowledge and problem-solving skills necessary to excel in the tech industry.
              </p>
            
                <div className="flex flex-row w-full sm:flex-col justify-center min-h-[250px] sm:min-h-[200px] bg-gray-700  rounded-md relative">
@@ -287,7 +282,7 @@ const [lastScroll, setLastScroll] = useState(0);
     />
           </div>
              <p className="w-full lg:flex-1 text-lg text-gray-400 text-center my-5">
-             I possess Link versatile skill set that spans Link wide range of technical and creative abilities. From mastering complex software tools to excelling in collaborative environments, I can quickly adapt to new challenges and tasks. My problem-solving capabilities allow me to find innovative solutions, while my strong communication skills enable me to convey ideas clearly and effectively. Whether working independently or as part of Link team, I thrive in dynamic settings and consistently deliver high-quality results. My passion for growth drives me to continuously refine my skills, ensuring that I stay at the forefront of evolving trends and technologies.
+             I possess a versatile skill set that spans a wide range of technical and creative abilities. From mastering complex software tools to excelling in collaborative environments, I can quickly adapt to new challenges and tasks. My problem-solving capabilities allow me to find innovative solutions, while my strong communication skills enable me to convey ideas clearly and effectively. Whether working independently or as part of Link team, I thrive in dynamic settings and consistently deliver high-quality results. My passion for growth drives me to continuously refine my skills, ensuring that I stay at the forefront of evolving trends and technologies.
             </p>
             </div>
         
@@ -319,7 +314,7 @@ const [lastScroll, setLastScroll] = useState(0);
       {/* Left Section */}
       <div className="left flex items-center justify-center flex-1 p-4">
         <div className="flex flex-col items-center md:items-start">
-          <div className="logo text-2xl flex gap-3 mb-5">
+          <div className="logo text-2xl flex items-center gap-3 mb-5">
             Hello I`m{" "}
             <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 px-3 py-1 rounded-2xl uppercase text-3xl font-bold">
               Abdullah
@@ -328,8 +323,8 @@ const [lastScroll, setLastScroll] = useState(0);
           <div className="mb-10 text-5xl font-semibold self-center text-center md:text-left">
             Welcome to my portfolio
           </div>
-          <p className="text-lg text-center sm:text-left w-[100%] md:w-[80%] min-h-[80px]">
-            <span>Here I provide Link lot of services like that </span>
+          <p className="text-lg text-center sm:text-left w-[100%] md:w-[350px] min-h-[80px]">
+            <span>Here I provide a lot of services like that </span>
             <span className="underline text-xl" ref={el}></span>
           </p>
           <button className={`bg-orange-600 ${isVisible ? 'button-animate': ''} font-bold text-xl my-5  px-4 py-2 rounded-md hover:bg-orange-500`}><Link href="#contact">Hire Me</Link></button>
