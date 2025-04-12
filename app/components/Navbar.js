@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -11,6 +11,7 @@ export default function Navbar() {
   };
   const handleHomeClick = (hash)=>{
     setcurrentHash(hash)
+    setIsOpen(false)
   }
   return (
     <nav className="border-b-2 flex items-center px-5 justify-between md:justify-between border-gray-600 h-[8vh] z-10 top-0 sticky backdrop-blur">
