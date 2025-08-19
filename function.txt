@@ -1,0 +1,5 @@
+Tailwindcss
+Nextjs
+Type.js
+ReactIcons
+lottiefiles animation
